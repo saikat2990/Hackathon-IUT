@@ -76,12 +76,23 @@ namespace AspMVCCRUD.Controllers
              var users = await _context.Users.ToListAsync();
                    foreach(var i in users){
 
-                        if (i.username ==user.username) {
-                            if (i.password == user.password) {
-                            return Redirect("../Home/About");
-                        }
+                    if(i.username == "admin")
+                    {
+                        if (i.password == "123456")
+                        {
+                            return Redirect("../Products/Create");
                         }
                     }
+
+                else if (i.username == user.username)
+                {
+                    if (i.password == user.password)
+                    {
+                        return Redirect("../Home/Contact");
+                    }
+                }
+
+            }
                
            
             return View();

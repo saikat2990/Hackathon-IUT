@@ -24,7 +24,7 @@ namespace AspMVCCRUD.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "This is reviews!";
+            ViewData["Message"] = "Products in our site!";
 
             return View();
         }

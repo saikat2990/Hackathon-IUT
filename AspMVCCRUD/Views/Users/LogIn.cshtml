@@ -14,15 +14,40 @@
                 <input asp-for="username" class="form-control" />
                 <span asp-validation-for="username" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
                 <label asp-for="password" class="control-label"></label>
-                <input asp-for="password" class="form-control" />
+                <input asp-for="password" type="password" class="form-control" />
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="LogIn" class="btn btn-default" />
             </div>
+
         </form>
     </div>
+
 </div>
+<div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
+<img id="myImg"><br>
+<p id="name"></p>
+<div id="status">
+</div>
+<script type="text/javascript">
+
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var imagurl=profile.getImageUrl();
+        var name=profile.getName();
+        var email=profile.getEmail();
+        alert(email);
+        document.getElementById("myImg").src = imagurl;
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("myP").style.visibility = "hidden";
+        document.getElementById("status").innerHTML = 'Welcome '+name+'!<a href=test.jsp?
+        email='+email+'&name='+name+'/>Continue with Google login</a></p>'
+        window.location.href='https://localhost:44384/Home/Contact';
+    }
+
+
+</script>
