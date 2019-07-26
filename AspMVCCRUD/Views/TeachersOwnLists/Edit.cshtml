@@ -1,0 +1,59 @@
+﻿@model AspMVCCRUD.Models.TeachersOwnList
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>TeachersOwnList</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TeachersOwnListId" />
+            <div class="form-group">
+                <label asp-for="courseId" class="control-label"></label>
+                <input asp-for="courseId" class="form-control" />
+                <span asp-validation-for="courseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="completeCourse" class="control-label"></label>
+                <input asp-for="completeCourse" class="form-control" />
+                <span asp-validation-for="completeCourse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointPerCourses" class="control-label"></label>
+                <input asp-for="PointPerCourses" class="form-control" />
+                <span asp-validation-for="PointPerCourses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberofClassPerCourses" class="control-label"></label>
+                <input asp-for="NumberofClassPerCourses" class="form-control" />
+                <span asp-validation-for="NumberofClassPerCourses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberofDoneClassPerCourses" class="control-label"></label>
+                <input asp-for="NumberofDoneClassPerCourses" class="form-control" />
+                <span asp-validation-for="NumberofDoneClassPerCourses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PickUpAmmount" class="control-label"></label>
+                <input asp-for="PickUpAmmount" class="form-control" />
+                <span asp-validation-for="PickUpAmmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

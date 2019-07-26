@@ -1,0 +1,36 @@
+﻿@model AspMVCCRUD.Models.StudentsList
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentsList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.studentname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.completeCourse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.completeCourse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DuePoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DuePoints)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.StudentsListId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

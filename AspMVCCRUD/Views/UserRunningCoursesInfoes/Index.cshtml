@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AspMVCCRUD.Models.UserRunningCoursesInfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.courseId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompleteClasses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remainingPoints)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompleteClasses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remainingPoints)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UserRunningCoursesInfoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserRunningCoursesInfoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserRunningCoursesInfoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

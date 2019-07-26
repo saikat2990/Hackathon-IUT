@@ -12,7 +12,18 @@ namespace AspMVCCRUD.Models
         {
 
         }
-        public DbSet<User>Users { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<CourseTable>CourseTables { get; set; }
+        public DbSet<runningCourse>runningCourses { get; set; }
+        public DbSet<RunningCoursesList> RunningCoursesLists { get; set; }
+        public DbSet<StudentsList> StudentsLists { get; set; }
+        public DbSet<TeachersList> TeachersLists { get; set; }
+        public DbSet<TeachersOwnList> TeachersOwnLists { get; set; }
+        public DbSet<TrainerReg> TrainerRegs { get; set; }
+        public DbSet<UserDoneCoursesInfo> UserDoneCoursesInfos { get; set; }
+        public DbSet<UserRunningCoursesInfo> UserRunningCoursesInfos { get; set; }
+        public DbSet<UserLogIn> UserLogIns { get; set; }
+        public DbSet<VideoList> VideoLists { get; set; }
+        public DbSet<StudentPage> StudentPages { get; set; }
+
     }
 }

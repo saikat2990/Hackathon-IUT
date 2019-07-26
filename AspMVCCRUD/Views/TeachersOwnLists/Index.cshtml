@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AspMVCCRUD.Models.TeachersOwnList>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.courseId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.completeCourse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointPerCourses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberofClassPerCourses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberofDoneClassPerCourses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PickUpAmmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.completeCourse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointPerCourses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberofClassPerCourses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberofDoneClassPerCourses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PickUpAmmount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TeachersOwnListId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TeachersOwnListId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TeachersOwnListId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

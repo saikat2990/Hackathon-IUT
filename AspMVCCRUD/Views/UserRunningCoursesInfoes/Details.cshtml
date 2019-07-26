@@ -1,0 +1,48 @@
+﻿@model AspMVCCRUD.Models.UserRunningCoursesInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserRunningCoursesInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.courseId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.courseId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrainerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompleteClasses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompleteClasses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.remainingPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.remainingPoints)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.UserRunningCoursesInfoId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

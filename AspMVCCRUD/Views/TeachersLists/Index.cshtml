@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AspMVCCRUD.Models.TeachersList>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.trianername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.completeCourse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RemainPoints)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.trianername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.completeCourse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemainPoints)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TeachersListId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TeachersListId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TeachersListId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@model AspMVCCRUD.Models.UserLogIn
+
+@{
+    ViewData["Title"] = "Create";
+}
+<br>
+<br>
+<div class="background" style="background:linear-gradient(#348F50,#56B4D3);padding:20px;border-radius:10px;color:snow;">
+    <h2>Sign Up as a Student</h2>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="name" class="control-label"></label>
+                    <input asp-for="name" class="form-control" />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="password" class="control-label"></label>
+                    <input asp-for="password" class="form-control" />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="phnNumber" class="control-label"></label>
+                    <input asp-for="phnNumber" class="form-control" />
+                    <span asp-validation-for="phnNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign Up" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<div>
+    @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+    <a href="../Home/Index" class="button3">Go to Home</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,45 @@
+﻿@model AspMVCCRUD.Models.runningCourse
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>runningCourse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrainerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.numberOfStudents)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.numberOfStudents)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.numberOfClasses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.numberOfClasses)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="runningCourseId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

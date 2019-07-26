@@ -1,0 +1,57 @@
+﻿@model AspMVCCRUD.Models.TeachersOwnList
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TeachersOwnList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.courseId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.courseId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.completeCourse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.completeCourse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PointPerCourses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PointPerCourses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberofClassPerCourses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberofClassPerCourses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberofDoneClassPerCourses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberofDoneClassPerCourses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PickUpAmmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PickUpAmmount)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TeachersOwnListId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

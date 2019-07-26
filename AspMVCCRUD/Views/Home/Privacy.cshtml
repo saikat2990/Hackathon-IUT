@@ -1,6 +1,94 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Courses";
 }
-<h2>@ViewData["Title"]</h2>
+<head>
+        <style>
+            .flip-card {
+                background-color: transparent;
+                width: 300px;
+                height: 200px;
+                border: 1px solid #f1f1f1;
+                perspective: 1000px; /* Remove this if you don't want the 3D effect */
+                float: left;
+                border-radius: 10px;
+            }
 
-<p>Use this page to detail your site's privacy policy.</p>
+            /* This container is needed to position the front and back side */
+            .flip-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            /* Do an horizontal flip when you move the mouse over the flip box container */
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            /* Position the front and back side */
+            .flip-card-front, .flip-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+
+            /* Style the front side (fallback if image is missing) */
+            .flip-card-front {
+                background-color: transparent;
+                color: black;
+            }
+
+            /* Style the back side */
+            .flip-card-back {
+                background-color: dodgerblue;
+                color: white;
+                border-radius:10px;
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+
+<div>
+    @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+    <a href="../Home/Index" class="button3">Home</a>
+</div>
+<div class="background" style="background:linear-gradient(#348F50,#56B4D3);padding:20px;border-radius:10px;background-repeat:repeat-y;height:600px;">
+    <h3>Courses available to us</h3>
+    
+
+
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/images/csgo.webp" alt="Avatar" style="width:200px;height:200px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Counter Strike: GO</h1>
+                    <p>Competitive gaming tutorial</p>
+                    <p>Learn how to game like a professional!</p>
+                    <button class="button_2">Register</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/images/py.png" alt="Avatar" style="width:200px;height:200px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Python</h1>
+                    <p>Programming Language</p>
+                    <p>Learn how to game like a professional!</p>
+                    <button class="button_2">Register</button>
+                </div>
+            </div>
+        </div>
+    
+</div>

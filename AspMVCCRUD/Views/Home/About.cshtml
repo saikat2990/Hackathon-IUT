@@ -1,224 +1,61 @@
 ﻿@{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Admin Panel";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Example of Bootstrap 3 Carousel</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
-        .carousel {
-            background: #2f4357;
-            margin-top: 20px;
-        }
-
-            .carousel .item {
-                min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
-            }
-
-                .carousel .item img {
-                    margin: 0 auto; /* Align slide image horizontally center */
-                }
-
-        .bs-example {
-            margin: 20px;
-        }
-    </style>
-    <style>
-        /*body {
-     font-family: Arial, sans-serif;
-     background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
-     background-size: cover;
-     height: 100vh;
- }*/
-
-        h1 {
-            text-align: center;
-            font-family: Tahoma, Arial, sans-serif;
-            color: #06D85F;
-            margin: 80px 0;
-        }
-
-        .box {
-            width: 300px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
-            border: 2px solid #fff;
-            border-radius: 20px/50px;
-            background-clip: padding-box;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .box2 {
-            width: 300px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.2);
-            padding: 100px;
-            border: 2px solid #fff;
-            border-radius: 20px/50px;
-            background-clip: padding-box;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .button {
-            font-size: 1em;
-            padding: 10px;
-            color: #232323;
-            border: 2px solid #4b4b4b;
-            border-radius: 20px/50px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease-out;
-        }
-        .button:hover {
-            background: rgba(0, 0, 0, 0.22);
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-        }
-        .overlay:target {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .popup {
-            margin-top: 200px;
-            margin-left: 600px;
-            padding: 10px;
-            background: #fff;
-            border-radius: 5px;
-            width: 350px;
-            height: 350px;
-            position: relative;
-            transition: all 5s ease-in-out;
-        }
-
-        .popup2 {
 
 
-            padding: 10px;
-            background: #fff;
-            border-radius: 5px;
-            width: 350px;
-            height: 650px;
-            position: relative;
-            transition: all 5s ease-in-out;
-        }
 
-        .popup h2 .popup2{
-            margin-top: 0;
-            color: #333;
-            font-family: Tahoma, Arial, sans-serif;
-        }
-        .popup .close .popup2 {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            transition: all 200ms;
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-        }
-        .popup .popup2 .close:hover {
-            color: #06D85F;
-        }
-        .popup .popup2 .content {
-            max-height: 100%;
-            overflow: auto;
-        }
 
-        @@media screen and (max-width: 700px){
-            .box{
-                width: 70%;
-            }
-            .popup{
-                width: 70%;
-            }
-        }
+<br>
 
-    </style>
+<br>
+<div>
+    @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+    <a href="../Home/Index" class="button3">Home</a>
 
-</head>
-<body>
-    <div class="bs-example">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Carousel indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for carousel items -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="~/images/iphone1.jpg" alt="First Slide">
-                </div>
-                <div class="item">
-                    <img src="~/images/iphone2.jpg" alt="Third Slide">
-                </div>
-            </div>
-            <!-- Carousel controls -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
-    </div>
+    @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+    <a href="../Home/Index" class="button3">Sign Out</a>
+</div>
+<br>
 
-    <div class="box">
-        <b>Rating: </b>
-        <select class="button">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-    </div>
+<div class="background" style="background:linear-gradient(#348F50,#56B4D3);padding:20px;border-radius:10px;color:snow;">
 
-    <div class="box">
-        <a class="button" href="#popup1">Comment</a>
-    </div>
+    <h3>Admin Panel</h3>
+    <div class="row">
+        <div class="col-md-6">
 
-    <div id="popup1" class="overlay">
-        <div class="popup">
-            <a class="close" href="#">x</a>
-            <div class="content">
-                <form action="complain" method="post">
-                    <input id="user" name="" type="text" placeholder="write comment..."
-                           style="font-size: 20px; font-family: Calibri;" class="box2">
-
-                    <input type="submit" style="font-size: 20px;" class="button" value="comment">
-                </form>
+            <div>
+                @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+                <a href="../StudentsLists/Index" class="button3">Registered student table</a>
             </div>
         </div>
+        <div class="col-md-6">
+            <a href="../TeachersLists/Index" class="button3">Registered teacher table</a>
+        </div>
+        <br>
+        <div class="col-md-6">
+            <a href="../CourseTables/Index" class="button3">ADD COURSES</a>
+        </div>
+        <div class="col-md-6">
+            <a href="#" class="button3">Charge Student(VIA BDAPPS)</a>
+        </div>
+
     </div>
 
+</div>
 
-</body>
-</html>
+
+
+
+
+
+@*<div class="admin_panel">
+    <h3>ADMIN CAN MODIFY STUDENT/TEACHER DATA HERE</h3>
+
+
+    1. @Html.ActionLink("Registered student table", "Index", "StudentsLists", null, new { style = "text-decoration:none" })<br />
+    2. @Html.ActionLink("Registered teacher table", "Index", "TeachersLists", null, new { style = "text-decoration:none" })
+    <br />
+    3. @Html.ActionLink("ADD COURSES", "Index", "CourseTables", null, new { style = "text-decoration:none" })
+    <br />
+    4. @Html.ActionLink("Charge Student(VIA BDAPPS)", "About", "Home", null, new { style = "text-decoration:none" })
+</div>*@

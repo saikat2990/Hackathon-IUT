@@ -1,0 +1,37 @@
+﻿@model AspMVCCRUD.Models.StudentPage
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+<div>
+    @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+    <a href="../Home/Index" class="button3">Home</a>
+</div>
+<div class="background" style="background:linear-gradient(#348F50,#56B4D3);padding:20px;border-radius:10px;color:snow;">
+    
+    <h3>Student Panel</h3>
+    <div class="row">
+        <div class="col-md-6">
+
+            <div>
+                @*<button class="btn-primary" style="border-radius">@Html.ActionLink("Back to Home", "Index", "Home")</button>*@
+                <a href="../UserRunningCoursesInfoes/Index" class="button3">Running Courses</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <a href="../UserRunningCoursesInfoes/Index" class="button3">Done Courses</a>
+        </div>
+        <div class="col-md-6">
+            <a href="../Home/Contact" class="button3">Join Class</a>
+        </div>
+        <div class="col-md-6">
+            <a href="#" class="button3">Submit Assignment</a>
+        </div>
+
+    </div>
+
+</div>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
